@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas de software</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #172a3a; /* Azul Oscuro Profesional */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #a4c9ff;
+        }
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #d1d9e6;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #28a745; /* Verde para destacar títulos */
+            border-bottom: 3px solid #28a745;
+            padding-bottom: 15px;
+            margin: 0 20px 30px 20px;
+            font-size: 2em;
+        }
+        h3 {
+            color: #172a3a;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #007bff; /* Azul Marino */
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f7f9fc;
+        }
+        .detail-card {
+            background-color: #e6f7ff;
+            border: 1px solid #b3e0ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .detail-card h4 {
+            color: #007bff;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f0f7f9;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 4px;
+            border-left: 3px solid #ffc107; /* Amarillo para enfoque */
+        }
+        .content-padding {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🚀Pruebas de software</h1>
+        <p>Asegurando la calidad, rendimiento y seguridad de su aplicación empresarial.</p>
+    </header>
+
+    <div class="container">
+
+        <section id="tipos-pruebas">
+            <h2>Clasificación y de los tipos de pruebas de software</h2>
+            <div class="content-padding">
+                <p>Las pruebas se organizan jerárquicamente. Al inicio, el foco está en pequeños bloques de código (pruebas de caja blanca); al final, el enfoque es en la experiencia del usuario y el cumplimiento de requisitos (pruebas de caja negra).</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de prueba</th>
+                            <th>Nivel de enfoque</th>
+                            <th>Características técnicas clave</th>
+                            <th>Impacto y beneficios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pruebas unitarias</strong></td>
+                            <td>Componente (Caja blanca)</td>
+                            <td>Aísla una función, método o clase. Se usan stubs o Mocks para simular dependencias externas. Se centran en la cobertura de código.</td>
+                            <td>Garantiza la corrección de la lógica de negocio más granular. Son rápidas de ejecutar, facilitando la integración continua (CI) y la refactorización sin miedo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pruebas de integración</strong></td>
+                            <td>Módulos (Caja gris)</td>
+                            <td>Verifica la comunicación entre dos o más módulos (ej. Servicio, repositorio, base de datos). Prueba las interfaces de comunicación.</td>
+                            <td>Asegura la correcta fluidez de datos a través de las capas de la aplicación. Crucial para prevenir errores al pasar de un módulo a otro.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pruebas funcionales</strong></td>
+                            <td>Requisitos (Caja negra)</td>
+                            <td>Validan el sistema completo contra las especificaciones funcionales (qué debe hacer). Incluye la prueba de flujos completos del usuario.</td>
+                            <td>Confirma que el software entrega las características prometidas y maneja los casos de uso esperados y alternativos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pruebas de aceptación</strong></td>
+                            <td>Negocio (Caja negra)</td>
+                            <td>Realizadas por el cliente o usuario final. Confirman que el software está listo para el entorno de producción y cumple las necesidades del negocio.</td>
+                            <td>Minimiza el riesgo de lanzar un producto que, aunque técnicamente funcional, no resuelve el problema real o no es usable por el destinatario.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pruebas de regresión</strong></td>
+                            <td>Mantenimiento</td>
+                            <td>Re-ejecución de pruebas existentes después de cualquier cambio, corrección de errores o nueva funcionalidad.</td>
+                            <td>Previene la introducción de nuevos errores en partes del sistema que antes funcionaban (efecto secundario no deseado), manteniendo la estabilidad.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pruebas no funcionales</strong></td>
+                            <td>Cualidad (Rendimiento, Seguridad)</td>
+                            <td>Evalúan cómo funciona el sistema. Incluyen pruebas de performance (carga, estrés), seguridad (vulnerabilidades) y usabilidad.</td>
+                            <td>Determinan la capacidad real del sistema. Es vital para la experiencia del usuario y la protección de datos, especialmente en entornos empresariales.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="pruebas-proyecto">
+            <h2>🎯 Estrategia de pruebas para el proyecto DOHUTALENT</h2>
+            <div class="content-padding">
+                <p>El proyecto, siendo un sistema de gestión de empleados, es un sistema de registro de sistemas, lo que hace que la integridad de datos y la seguridad sean las prioridades máximas.</p>
+
+                <div class="detail-card">
+                    <h4>1. Pruebas de integración de persistencia (La columna vertebral)</h4>
+                    <p><strong>Justificación:</strong> Es la prueba más crítica en un sistema de datos. Dado que se usa spring boot y postgreSQL, debemos asegurar que las transacciones sean correctas y que el mapeo objeto-relacional funcione sin errores. Estas pruebas deben ejecutarse contra una base de datos real o contenerizada (usando herramientas como Testcontainers) y no contra una base de datos en memoria, que podría ocultar diferencias de dialecto SQL.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>2. Pruebas de seguridad (Protección de información sensible)</h4>
+                    <p><strong>Justificación:</strong> Se manejan datos privados (nombres, salarios, información personal) regidos por regulaciones de datos. Se deben probar:</p>
+                    <ul>
+                        <li>Autenticación: ¿El sistema verifica correctamente las credenciales? (Ej. Ataques de fuerza bruta).</li>
+                        <li>Autorización: Un usuario regular no puede eliminar o cargar un documento. Probar los roles y permisos definidos en spring security.</li>
+                        <li>Validación de entrada: Prevenir ataques de inyección SQL y XSS, asegurando que spring boot sanitice todos los datos recibidos del frontend.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h4>3. Pruebas de rendimiento (Garantía operacional)</h4>
+                    <p><strong>Justificación:</strong> El sistema debe ser utilizable incluso bajo carga. Debemos simular:</p>
+                    <ul>
+                        <li>Pruebas de carga: 10 usuarios concurrentes intentando iniciar sesión a la vez al inicio de la jornada.</li>
+                        <li>Pruebas de estrés: Determinar el punto de ruptura del backend de spring boot (ej. ¿cuántas solicitudes por segundo puede manejar antes de fallar?).</li>
+                        <li>Pruebas de volumen: Medir el rendimiento al manipular un gran conjunto de datos (ej. generar un informe anual de 50,000 registros).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="Herramientas">
+            <h2>🔧 Herramientas avanzadas para el ecosistema spring boot / postgreSQL</h2>
+            <div class="content-padding">
+                <p>La selección de herramientas se enfoca en la eficiencia y la integración nativa con Java y el ecosistema de contenedores.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de prueba</th>
+                            <th>Herramienta clave</th>
+                            <th>Detalle de aplicación en el proyecto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unitarias / Aislamiento</td>
+                            <td><strong>JUnit 5 </strong> y <strong>Mockito</strong></td>
+                            <td>Utilizar JUnit 5 como framework base. Mockito es fundamental para aislar la capa de servicio, simulando el comportamiento del Repositorio. Esto permite probar la lógica de negocio sin tocar postgreSQL.</td>
+                        </tr>
+                        <tr>
+                            <td>Integración backend</td>
+                            <td><strong>Spring boot test</strong> y <strong>Testcontainers</strong></td>
+                            <td>Spring Boot Test permite levantar un contexto de aplicación limitado para la prueba. Testcontainers es la mejor práctica para iniciar un contenedor docker de postgreSQL para cada prueba de integración, garantizando un entorno idéntico a la producción y aislamiento entre pruebas.</td>
+                        </tr>
+                        <tr>
+                            <td>Funcionales / E2E (Frontend/Backend)</td>
+                            <td><strong>Cypress</strong> o <strong>Playwright</strong></td>
+                            <td>Más modernos y rápidos que Selenium. Son ideales para simular el flujo completo del empleado (clics, entradas, validaciones de UI). Aseguran que el frontend y el backend de spring boot interactúen correctamente.</td>
+                        </tr>
+                        <tr>
+                            <td>Rendimiento</td>
+                            <td><strong>Apache JMeter</strong> o Gatling</td>
+                            <td>JMeter es la opción más usada. Permite crear scripts que simulan múltiples usuarios haciendo peticiones RESTful al Backend de Spring Boot para evaluar el tiempo de respuesta bajo carga.</td>
+                        </tr>
+                        <tr>
+                            <td>Seguridad / Auditoría</td>
+                            <td>OWASP ZAP y SonarQube</td>
+                            <td>OWASP ZAP para pruebas dinámicas (DAST). SonarQube (análisis estático, SAST) se integra al CI/CD para detectar automáticamente vulnerabilidades de seguridad y deuda técnica en el código java de spring boot.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
